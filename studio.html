@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>风景创作 · 科普十文旅</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"></span>
+        <span>科普十文旅</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="guide.html">旅游导览</a>
+        <a href="geography.html">地理科普</a>
+        <a href="learn.html">互动学习</a>
+        <a href="studio.html">风景创作</a>
+      </nav>
+      <button class="menu-toggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-hero page-hero-studio">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <span class="hero-tag" style="margin-bottom:16px;">乡村振兴 · AI 创作</span>
+      <h1>乡村风景创作工作室</h1>
+      <p>上传乡村风景照，由七牛云 AI 生成乡村振兴主题的图文、海报与故事作品</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="studio-layout">
+        <div>
+          <div class="upload-zone" id="upload-zone">
+            <div class="upload-placeholder" id="upload-placeholder">
+              <div class="upload-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              </div>
+              <p>点击或拖拽上传风景照片</p>
+              <small>支持 JPG、PNG、WebP，最大 10MB</small>
+            </div>
+            <img class="upload-preview" id="upload-preview" style="display:none" alt="预览">
+          </div>
+          <input type="file" id="file-input" accept="image/*" hidden>
+        </div>
+
+        <div class="studio-controls">
+          <div class="control-group">
+            <label for="gen-type">生成类型</label>
+            <select id="gen-type">
+              <option value="video">乡村振兴短片封面</option>
+              <option value="article">乡村游记图文</option>
+              <option value="poster">乡村振兴科普海报</option>
+              <option value="story">乡村风景故事</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label for="gen-style">创作风格</label>
+            <select id="gen-style">
+              <option value="realistic">写实风光</option>
+              <option value="ink">水墨国风</option>
+              <option value="vintage">复古胶片</option>
+              <option value="vivid">鲜艳动漫</option>
+              <option value="poetic">诗意文艺</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label for="gen-prompt">补充描述（可选）</label>
+            <textarea id="gen-prompt" placeholder="描述乡村振兴主题创作效果，如：金秋板栗丰收、美丽乡村民宿、田野炊烟..."></textarea>
+          </div>
+          <div class="control-group">
+            <label for="gen-location">拍摄地点</label>
+            <select id="gen-location">
+              <option value="">选择或自动识别</option>
+              <option value="慕田峪长城">慕田峪长城</option>
+              <option value="雁栖湖">雁栖湖</option>
+              <option value="红螺寺">红螺寺</option>
+              <option value="黄花城水长城">黄花城水长城</option>
+              <option value="喇叭沟门">喇叭沟门原始森林</option>
+              <option value="怀柔乡村">怀柔乡村</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" id="generate-btn" style="width:100%; justify-content:center;" disabled>
+            开始 AI 创作
+          </button>
+        </div>
+      </div>
+
+      <div class="loading-overlay" id="loading">
+        <div class="spinner"></div>
+      <p>七牛云 AI 正在创作中，请稍候...</p>
+      <small style="color:var(--color-text-muted)">图像生成约需 15-60 秒</small>
+      </div>
+
+      <div class="result-panel" id="result-panel">
+        <div class="section-header" style="margin-top:40px;">
+          <h2>创作成果</h2>
+          <p>您的 AI 风景作品已生成</p>
+        </div>
+        <div class="result-grid" id="result-grid"></div>
+      </div>
+
+      <div class="gallery-section">
+        <div class="section-header">
+          <h2>乡村振兴主题作品墙</h2>
+          <p>游客分享的怀柔乡村风景与乡村振兴 AI 创作</p>
+        </div>
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>科普十文旅 · 怀柔乡村振兴综合网站</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/ai-config.js"></script>
+  <script src="js/ai.js"></script>
+  <script src="js/studio.js"></script>
+</body>
+</html>

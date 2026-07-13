@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>地理科普 · 科普十文旅</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-icon"></span>
+        <span>科普十文旅</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="guide.html">旅游导览</a>
+        <a href="geography.html">地理科普</a>
+        <a href="learn.html">互动学习</a>
+        <a href="studio.html">风景创作</a>
+      </nav>
+      <button class="menu-toggle" aria-label="菜单"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero page-hero-geo">
+    <div class="page-hero-bg"></div>
+    <div class="container">
+      <span class="hero-tag" style="margin-bottom:16px;">乡村振兴 · 地理科普</span>
+      <h1>地理与生态科普</h1>
+      <p>解读怀柔地质背景与生态风貌，理解绿水青山就是金山银山的乡村实践</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="geo-tabs" id="geo-tabs">
+        <button class="geo-tab active" data-panel="overview">地质概况</button>
+        <button class="geo-tab" data-panel="greatwall">长城地质</button>
+        <button class="geo-tab" data-panel="ecology">生态地貌</button>
+        <button class="geo-tab" data-panel="scenery">沿途风貌</button>
+      </div>
+      <div id="geo-panels"></div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Timeline</span>
+        <h2>地质年表简览</h2>
+        <p>怀柔地区主要地质演化历程</p>
+      </div>
+      <div class="timeline" id="geo-timeline"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container"><div class="footer-bottom"><p>科普十文旅 · 怀柔乡村振兴综合网站</p></div></div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/geography.js"></script>
+</body>
+</html>
